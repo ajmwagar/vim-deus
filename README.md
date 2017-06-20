@@ -28,11 +28,17 @@ Manual: place `dues.vim` in your `vimfiles/colors` folder and add this line to y
 OR 
 
 Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
+
 Pathogen:
+
 `cd ~/.vim/`
+
 `mkdir bundle`
+
 `cd bundle`
+
 `git clone https://github.com/ajmwagar/vim-dues.git`
+
 In your terminal
 
 ---
@@ -43,7 +49,7 @@ In your terminal
 - Lua
 - Go
 - JavaScript
-- CSS/HTMl
+- CSS/HTML
 - PHP
 - C#
 - JSON
