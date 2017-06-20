@@ -33,7 +33,7 @@ Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
 ---
 
 ## Thank You
-I took **a lot** of inspiration from two great colorschemes
+I took **a lot** of inspiration from two great colorschemes,
 [Onedark](https://github.com/joshdick/onedark.vim) and
 [Gruvbox](https://github.com/morhetz/gruvbox). I want to thank their creators for making
 such great color schemes. So thank you.
