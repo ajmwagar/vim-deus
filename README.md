@@ -25,7 +25,7 @@ GVIM + YCM:
 Manual: place `dues.vim` in your `vimfiles/colors` folder and add this line to your `.vimrc`
 `colors dues`
 
-OR 
+**OR**
 
 Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
 
@@ -48,32 +48,35 @@ In your terminal
 
 - Lua
 - Go
-- JavaScript
-- CSS/HTML
+- **JavaScript 
+- CSS/HTML**
 - PHP
-- C#
+- **C#**
 - JSON
-- Markdown
+- **Markdown**
 - Haskell
 - Scala
 - Elixir
 - Java
 - MoonScript
 - Objective C
-- C
+- C Languages
 - CoffeeScript
-- Ruby
-- Python
+- **Ruby**
+- **Python**
 - Clojure
 - XML
+
+** Bold** = really nice looking (They all look good but these are my personal favorites.)
 
 ---
 
 ## Plugin support
 
+- Airline `:AirlineTheme dues`
 - Ctrlp
 - NerdTREE
-- Syntastic
+- Syntastic (and most linters)
 - YCM (YouCompleteMe)
 - Vim-easy-motion
 - Sneak
