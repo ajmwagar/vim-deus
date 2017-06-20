@@ -24,4 +24,4 @@ Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
 GVIM: 
 [SC]
 
-[SC]: https://github.com/ajmwagar/vim-dues/raw/master/src/common/screencaps/Dues.png "Dues Colorscheme"
+[SC]: https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme"
