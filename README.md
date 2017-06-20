@@ -48,8 +48,8 @@ In your terminal
 
 - Lua
 - Go
-- **JavaScript 
-- CSS/HTML**
+- **JavaScript** 
+- **CSS/HTML**
 - PHP
 - **C#**
 - JSON
