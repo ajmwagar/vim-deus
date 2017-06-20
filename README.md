@@ -28,3 +28,9 @@ GVIM:
 GVIM + YCM:
 
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
+
+---
+
+## Thank You
+I took **Alot** of inspiration from two great colorschemes Onedark and Gruvbox. I want to thank their creators for making such great
+color schemes. So thank you
