@@ -15,6 +15,7 @@ Manual: place `dues.vim` in your `vimfiles/colors` folder and add this line to y
 OR 
 
 Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
+
 `git clone https://github.com/ajmwagar/vim-dues.git`
 
 ---
@@ -23,3 +24,6 @@ Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
 
 GVIM: 
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
+
+GVIM + YCM:
+![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/ScreencapYCM.png "Dues Colorscheme")
