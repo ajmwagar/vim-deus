@@ -26,4 +26,5 @@ GVIM:
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/ScreencapYCM.png "Dues Colorscheme")
 
 GVIM + YCM:
+
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
