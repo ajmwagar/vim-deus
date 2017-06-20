@@ -18,6 +18,10 @@ GVIM + YCM:
 
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
 
+GVIM + Pylint + Syntastic:
+
+![alt-text](https://github.com/ajmwagar/vimdues/blob/master/screencaps/pylint.png "Dues Colorscheme")
+
 ---
 
 ## Installation
