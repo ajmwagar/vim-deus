@@ -975,7 +975,7 @@ hi! link javaScriptFunction duesAqua
 hi! link javaScriptIdentifier duesRed
 hi! link javaScriptMember duesBlue
 hi! link javaScriptNumber duesPurple
-hi! link javaScriptNull duesRed
+hi! link javaScriptNull duesPurple
 hi! link javaScriptParens duesFg3
 
 " }}}
