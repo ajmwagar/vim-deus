@@ -67,7 +67,7 @@ In your terminal
 - Clojure
 - XML
 
-** Bold** = really nice looking (They all look good but these are my personal favorites.)
+**Bold** = really nice looking (They all look good but these are my personal favorites.)
 
 ---
 
