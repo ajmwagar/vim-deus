@@ -20,7 +20,7 @@ GVIM + YCM:
 
 GVIM + Pylint + Syntastic:
 
-![alt-text](https://github.com/ajmwagar/vimdues/blob/master/screencaps/pylint.png "Dues Colorscheme")
+![alt-text](https://github.com/ajmwagar/vimdues/blob/master/screencaps/Pylint.png "Dues Colorscheme")
 
 ---
 
