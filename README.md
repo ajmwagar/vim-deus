@@ -18,6 +18,10 @@ GVIM + YCM:
 
 ![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
 
+GVIM + Pylint + Syntastic:
+
+![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Pylint.png "Dues Colorscheme")
+
 ---
 
 ## Installation
@@ -85,7 +89,7 @@ In your terminal
 ---
 
 ## Thank You
-I took **Alot** of inspiration from two great colorschemes, 
+I took **a lot** of inspiration from two great colorschemes, 
 [Onedark](https://github.com/joshdick/onedark.vim) and
 [Gruvbox](https://github.com/morhetz/gruvbox). I want to thank their creators for making such great
 color schemes. So thank you!
