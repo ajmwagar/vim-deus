@@ -98,9 +98,12 @@ let s:ds.dark4_256   = ['#7c6f64', 243]     " 124-111-100
 let s:ds.gray_245    = ['#928374', 245]     " 146-131-116
 let s:ds.gray_244    = ['#928374', 244]     " 146-131-116
 
-let s:ds.light0_hard = ['#f9f5d7', 230]     " 249-245-215
-let s:ds.light0      = ['#fdf4c1', 229]     " 253-244-193
-let s:ds.light0_soft = ['#f2e5bc', 228]     " 242-229-188
+let s:ds.light0_hard = ['#d3d3d3', 230]     " 249-245-215
+let s:ds.light0      = ['#d2d2d2', 229]     " 253-244-193
+let s:ds.light0_soft = ['#d4d4d4', 228]     " 242-229-188
+"let s:ds.light0_hard  = ['#2C313A', 234]     " 29-32-33
+"let s:ds.light0       = ['#2C323B', 235]     " 40-40-40
+"let s:ds.light0_soft  = ['#28282f', 236]     " 50-48-47
 let s:ds.light1      = ['#ebdbb2', 223]     " 235-219-178
 let s:ds.light2      = ['#d5c4a1', 250]     " 213-196-161
 let s:ds.light3      = ['#bdae93', 248]     " 189-174-147
@@ -130,7 +133,6 @@ let s:ds.faded_blue     = ['#076678', 24]      " 7-102-120
 let s:ds.faded_purple   = ['#8f3f71', 96]      " 143-63-113
 let s:ds.faded_aqua     = ['#427b58', 66]      " 66-123-88
 let s:ds.faded_orange   = ['#af3a03', 130]     " 175-58-3
-
 " }}}
 " Setup Emphasis: {{{
 
@@ -220,13 +222,13 @@ else
 
   let s:fg4_256 = s:ds.dark4_256
 
-  let s:red    = s:ds.faded_red
-  let s:green  = s:ds.faded_green
-  let s:yellow = s:ds.faded_yellow
-  let s:blue   = s:ds.faded_blue
-  let s:purple = s:ds.faded_purple
-  let s:aqua   = s:ds.faded_aqua
-  let s:orange = s:ds.faded_orange
+  let s:red    = s:ds.bright_red
+  let s:green  = s:ds.bright_green
+  let s:yellow = s:ds.bright_yellow
+  let s:blue   = s:ds.bright_blue
+  let s:purple = s:ds.bright_purple
+  let s:aqua   = s:ds.bright_aqua
+  let s:orange = s:ds.bright_orange
 endif
 
 " reset to 16 colors fallback
