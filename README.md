@@ -1,10 +1,10 @@
-# vim-dues
+# vim-deus
 
-Dues was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones.
+deus was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones.
 I was tired of them. I needed something original, something new. So if you are like me...
 which I believe many of you are, 
 
-I present you **Dues** 
+I present you **deus** 
 
 ---
 
@@ -12,22 +12,22 @@ I present you **Dues**
 ## Screenshots
 
 GVIM: 
-![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/ScreencapYCM.png "Dues Colorscheme")
+![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/ScreencapYCM.png "deus Colorscheme")
 
 GVIM + YCM:
 
-![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Dues.png "Dues Colorscheme")
+![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/deus.png "deus Colorscheme")
 
 GVIM + Pylint + Syntastic:
 
-![alt-text](https://github.com/ajmwagar/vim-dues/blob/master/screencaps/Pylint.png "Dues Colorscheme")
+![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Pylint.png "deus Colorscheme")
 
 ---
 
 ## Installation
 
-Manual: place `dues.vim` in your `vimfiles/colors` folder and add this line to your `.vimrc`
-`colors dues`
+Manual: place `deus.vim` in your `vimfiles/colors` folder and add this line to your `.vimrc`
+`colors deus`
 
 **OR**
 
@@ -41,7 +41,7 @@ Pathogen:
 
 `cd bundle`
 
-`git clone https://github.com/ajmwagar/vim-dues.git`
+`git clone https://github.com/ajmwagar/vim-deus.git`
 
 In your terminal
 
@@ -77,7 +77,7 @@ In your terminal
 
 ## Plugin support
 
-- Airline `:AirlineTheme dues`
+- Airline `:AirlineTheme deus`
 - Ctrlp
 - NerdTREE
 - Syntastic (and most linters)
