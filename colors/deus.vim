@@ -232,18 +232,18 @@ else
 endif
 
 " reset to 16 colors fallback
-if g:dues_termcolors == 16
-  let s:bg0[1]    = NONE
-  let s:fg4[1]    = 7
-  let s:gray[1]   = 8
-  let s:red[1]    = 9
-  let s:green[1]  = 10
-  let s:yellow[1] = 11
-  let s:blue[1]   = 12
-  let s:purple[1] = 5
-  let s:aqua[1]   = 14
-  let s:fg1[1]    = 15
-endif
+"if g:dues_termcolors == 16
+  "let s:bg0[1]    = NONE
+  "let s:fg4[1]    = 7
+  "let s:gray[1]   = 8
+  "let s:red[1]    = 9
+  "let s:green[1]  = 10
+  "let s:yellow[1] = 11
+  "let s:blue[1]   = 12
+  "let s:purple[1] = 5
+  "let s:aqua[1]   = 14
+  "let s:fg1[1]    = 15
+"endif
 
 " save current relative colors back to palette dictionary
 let s:ds.bg0 = s:bg0
