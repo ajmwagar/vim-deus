@@ -2,9 +2,9 @@
 
 deus was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones.
 I was tired of them. I needed something original, something new. So if you are like me...
-which I believe many of you are, 
+and I believe many of you are, 
 
-I present you **deus** 
+I present you **Deus** 
 
 ---
 
@@ -16,7 +16,7 @@ GVIM:
 
 GVIM + YCM:
 
-![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/deus.png "deus Colorscheme")
+![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Deus.png "deus Colorscheme")
 
 GVIM + Pylint + Syntastic:
 
