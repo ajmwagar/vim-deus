@@ -2,7 +2,7 @@
 " File: deus.vim
 " Description: a retro-modern colorscheme in Vim
 " Author: ajmwagar
-" Source: https://github.com/ajmwagar/dues
+" Source: https://github.com/ajmwagar/deus
 " Last Modified: 04 Sep 2015
 " -----------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='dues'
+let g:colors_name='deus'
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -25,56 +25,56 @@ endif
 " }}}
 " Global Settings: {{{
 
-if !exists('g:dues_bold')
-  let g:dues_bold=1
+if !exists('g:deus_bold')
+  let g:deus_bold=1
 endif
-if !exists('g:dues_italic')
+if !exists('g:deus_italic')
   if has('gui_running') || $TERM_ITALICS == 'true'
-    let g:dues_italic=1
+    let g:deus_italic=1
   else
-    let g:dues_italic=0
+    let g:deus_italic=0
   endif
 endif
-if !exists('g:dues_undercurl')
-  let g:dues_undercurl=1
+if !exists('g:deus_undercurl')
+  let g:deus_undercurl=1
 endif
-if !exists('g:dues_underline')
-  let g:dues_underline=1
+if !exists('g:deus_underline')
+  let g:deus_underline=1
 endif
-if !exists('g:dues_inverse')
-  let g:dues_inverse=1
-endif
-
-if !exists('g:dues_guisp_fallback') || index(['fg', 'bg'], g:dues_guisp_fallback) == -1
-  let g:dues_guisp_fallback='NONE'
+if !exists('g:deus_inverse')
+  let g:deus_inverse=1
 endif
 
-if !exists('g:dues_improved_strings')
-  let g:dues_improved_strings=0
+if !exists('g:deus_guisp_fallback') || index(['fg', 'bg'], g:deus_guisp_fallback) == -1
+  let g:deus_guisp_fallback='NONE'
 endif
 
-if !exists('g:dues_improved_warnings')
-  let g:dues_improved_warnings=0
+if !exists('g:deus_improved_strings')
+  let g:deus_improved_strings=0
 endif
 
-if !exists('g:dues_termcolors')
-  let g:dues_termcolors=256
+if !exists('g:deus_improved_warnings')
+  let g:deus_improved_warnings=0
 endif
 
-if !exists('g:dues_invert_indent_guides')
-  let g:dues_invert_indent_guides=0
+if !exists('g:deus_termcolors')
+  let g:deus_termcolors=256
 endif
 
-if exists('g:dues_contrast')
-  echo 'g:dues_contrast is deprecated; use g:dues_contrast_light and g:dues_contrast_dark instead'
+if !exists('g:deus_invert_indent_guides')
+  let g:deus_invert_indent_guides=0
 endif
 
-if !exists('g:dues_contrast_dark')
-  let g:dues_contrast_dark='medium'
+if exists('g:deus_contrast')
+  echo 'g:deus_contrast is deprecated; use g:deus_contrast_light and g:deus_contrast_dark instead'
 endif
 
-if !exists('g:dues_contrast_light')
-  let g:dues_contrast_light='medium'
+if !exists('g:deus_contrast_dark')
+  let g:deus_contrast_dark='medium'
+endif
+
+if !exists('g:deus_contrast_light')
+  let g:deus_contrast_light='medium'
 endif
 
 let s:is_dark=(&background == 'dark')
@@ -137,27 +137,27 @@ let s:ds.faded_orange   = ['#af3a03', 130]     " 175-58-3
 " Setup Emphasis: {{{
 
 let s:bold = 'bold,'
-if g:dues_bold == 0
+if g:deus_bold == 0
   let s:bold = ''
 endif
 
 let s:italic = 'italic,'
-if g:dues_italic == 0
+if g:deus_italic == 0
   let s:italic = ''
 endif
 
 let s:underline = 'underline,'
-if g:dues_underline == 0
+if g:deus_underline == 0
   let s:underline = ''
 endif
 
 let s:undercurl = 'undercurl,'
-if g:dues_undercurl == 0
+if g:deus_undercurl == 0
   let s:undercurl = ''
 endif
 
 let s:inverse = 'inverse,'
-if g:dues_inverse == 0
+if g:deus_inverse == 0
   let s:inverse = ''
 endif
 
@@ -171,9 +171,9 @@ let s:none = ['NONE', 'NONE']
 " determine relative colors
 if s:is_dark
   let s:bg0  = s:ds.dark0
-  if g:dues_contrast_dark == 'soft'
+  if g:deus_contrast_dark == 'soft'
     let s:bg0  = s:ds.dark0_soft
-  elseif g:dues_contrast_dark == 'hard'
+  elseif g:deus_contrast_dark == 'hard'
     let s:bg0  = s:ds.dark0_hard
   endif
 
@@ -201,9 +201,9 @@ if s:is_dark
   let s:orange = s:ds.bright_orange
 else
   let s:bg0  = s:ds.light0
-  if g:dues_contrast_light == 'soft'
+  if g:deus_contrast_light == 'soft'
     let s:bg0  = s:ds.light0_soft
-  elseif g:dues_contrast_light == 'hard'
+  elseif g:deus_contrast_light == 'hard'
     let s:bg0  = s:ds.light0_hard
   endif
 
@@ -232,7 +232,7 @@ else
 endif
 
 " reset to 16 colors fallback
-"if g:dues_termcolors == 16
+"if g:deus_termcolors == 16
   "let s:bg0[1]    = NONE
   "let s:fg4[1]    = 7
   "let s:gray[1]   = 8
@@ -275,8 +275,8 @@ let s:ds.orange = s:orange
 " Overload Setting: {{{
 
 let s:hls_cursor = s:orange
-if exists('g:dues_hls_cursor')
-  let s:hls_cursor = get(s:ds, g:dues_hls_cursor)
+if exists('g:deus_hls_cursor')
+  let s:hls_cursor = get(s:ds, g:deus_hls_cursor)
 endif
 
 let s:number_column = s:bg4
@@ -288,52 +288,52 @@ if exists('g:gitgutter_override_sign_column_highlight') &&
 else
   let g:gitgutter_override_sign_column_highlight = 0
 
-  if exists('g:dues_sign_column')
-    let s:sign_column = get(s:ds, g:dues_sign_column)
+  if exists('g:deus_sign_column')
+    let s:sign_column = get(s:ds, g:deus_sign_column)
   endif
 endif
 
 let s:color_column = s:bg1
-if exists('g:dues_color_column')
-  let s:color_column = get(s:ds, g:dues_color_column)
+if exists('g:deus_color_column')
+  let s:color_column = get(s:ds, g:deus_color_column)
 endif
 
 let s:vert_split = s:bg2
-if exists('g:dues_vert_split')
-  let s:vert_split = get(s:ds, g:dues_vert_split)
+if exists('g:deus_vert_split')
+  let s:vert_split = get(s:ds, g:deus_vert_split)
 endif
 
 let s:invert_signs = ''
-if exists('g:dues_invert_signs')
-  if g:dues_invert_signs == 1
+if exists('g:deus_invert_signs')
+  if g:deus_invert_signs == 1
     let s:invert_signs = s:inverse
   endif
 endif
 
 let s:invert_selection = s:inverse
-if exists('g:dues_invert_selection')
-  if g:dues_invert_selection == 0
+if exists('g:deus_invert_selection')
+  if g:deus_invert_selection == 0
     let s:invert_selection = ''
   endif
 endif
 
 let s:invert_tabline = ''
-if exists('g:dues_invert_tabline')
-  if g:dues_invert_tabline == 1
+if exists('g:deus_invert_tabline')
+  if g:deus_invert_tabline == 1
     let s:invert_tabline = s:inverse
   endif
 endif
 
 let s:italicize_comments = s:italic
-if exists('g:dues_italicize_comments')
-  if g:dues_italicize_comments == 0
+if exists('g:deus_italicize_comments')
+  if g:deus_italicize_comments == 0
     let s:italicize_comments = ''
   endif
 endif
 
 let s:italicize_strings = ''
-if exists('g:dues_italicize_strings')
-  if g:dues_italicize_strings == 1
+if exists('g:deus_italicize_strings')
+  if g:deus_italicize_strings == 1
     let s:italicize_strings = s:italic
   endif
 endif
@@ -363,12 +363,12 @@ function! s:HL(group, fg, ...)
 
   " special fallback
   if a:0 >= 3
-    if g:dues_guisp_fallback != 'NONE'
+    if g:deus_guisp_fallback != 'NONE'
       let fg = a:3
     endif
 
     " bg fallback mode should invert higlighting
-    if g:dues_guisp_fallback == 'bg'
+    if g:deus_guisp_fallback == 'bg'
       let emstr .= 'inverse,'
     endif
   endif
@@ -388,42 +388,42 @@ function! s:HL(group, fg, ...)
 endfunction
 
 " }}}
-" dues Hi Groups: {{{
+" deus Hi Groups: {{{
 
 " memoize common hi groups
-call s:HL('duesFg0', s:fg0)
-call s:HL('duesFg1', s:fg1)
-call s:HL('duesFg2', s:fg2)
-call s:HL('duesFg3', s:fg3)
-call s:HL('duesFg4', s:fg4)
-call s:HL('duesGray', s:gray)
-call s:HL('duesBg0', s:bg0)
-call s:HL('duesBg1', s:bg1)
-call s:HL('duesBg2', s:bg2)
-call s:HL('duesBg3', s:bg3)
-call s:HL('duesBg4', s:bg4)
+call s:HL('deusFg0', s:fg0)
+call s:HL('deusFg1', s:fg1)
+call s:HL('deusFg2', s:fg2)
+call s:HL('deusFg3', s:fg3)
+call s:HL('deusFg4', s:fg4)
+call s:HL('deusGray', s:gray)
+call s:HL('deusBg0', s:bg0)
+call s:HL('deusBg1', s:bg1)
+call s:HL('deusBg2', s:bg2)
+call s:HL('deusBg3', s:bg3)
+call s:HL('deusBg4', s:bg4)
 
-call s:HL('duesRed', s:red)
-call s:HL('duesRedBold', s:red, s:none, s:bold)
-call s:HL('duesGreen', s:green)
-call s:HL('duesGreenBold', s:green, s:none, s:bold)
-call s:HL('duesYellow', s:yellow)
-call s:HL('duesYellowBold', s:yellow, s:none, s:bold)
-call s:HL('duesBlue', s:blue)
-call s:HL('duesBlueBold', s:blue, s:none, s:bold)
-call s:HL('duesPurple', s:purple)
-call s:HL('duesPurpleBold', s:purple, s:none, s:bold)
-call s:HL('duesAqua', s:aqua)
-call s:HL('duesAquaBold', s:aqua, s:none, s:bold)
-call s:HL('duesOrange', s:orange)
-call s:HL('duesOrangeBold', s:orange, s:none, s:bold)
+call s:HL('deusRed', s:red)
+call s:HL('deusRedBold', s:red, s:none, s:bold)
+call s:HL('deusGreen', s:green)
+call s:HL('deusGreenBold', s:green, s:none, s:bold)
+call s:HL('deusYellow', s:yellow)
+call s:HL('deusYellowBold', s:yellow, s:none, s:bold)
+call s:HL('deusBlue', s:blue)
+call s:HL('deusBlueBold', s:blue, s:none, s:bold)
+call s:HL('deusPurple', s:purple)
+call s:HL('deusPurpleBold', s:purple, s:none, s:bold)
+call s:HL('deusAqua', s:aqua)
+call s:HL('deusAquaBold', s:aqua, s:none, s:bold)
+call s:HL('deusOrange', s:orange)
+call s:HL('deusOrangeBold', s:orange, s:none, s:bold)
 
-call s:HL('duesRedSign', s:red, s:sign_column, s:invert_signs)
-call s:HL('duesGreenSign', s:green, s:sign_column, s:invert_signs)
-call s:HL('duesYellowSign', s:yellow, s:sign_column, s:invert_signs)
-call s:HL('duesBlueSign', s:blue, s:sign_column, s:invert_signs)
-call s:HL('duesPurpleSign', s:purple, s:sign_column, s:invert_signs)
-call s:HL('duesAquaSign', s:aqua, s:sign_column, s:invert_signs)
+call s:HL('deusRedSign', s:red, s:sign_column, s:invert_signs)
+call s:HL('deusGreenSign', s:green, s:sign_column, s:invert_signs)
+call s:HL('deusYellowSign', s:yellow, s:sign_column, s:invert_signs)
+call s:HL('deusBlueSign', s:blue, s:sign_column, s:invert_signs)
+call s:HL('deusPurpleSign', s:purple, s:sign_column, s:invert_signs)
+call s:HL('deusAquaSign', s:aqua, s:sign_column, s:invert_signs)
 
 " }}}
 
@@ -435,7 +435,7 @@ call s:HL('Normal', s:fg1, s:bg0)
 
 " Correct background (see issue #7):
 " --- Problem with changing between dark and light on 256 color terminal
-" --- https://github.com/morhetz/dues/issues/7
+" --- https://github.com/morhetz/deus/issues/7
 if s:is_dark
   set background=dark
 else
@@ -470,8 +470,8 @@ if version >= 703
   call s:HL('CursorLineNr', s:yellow, s:bg1)
 endif
 
-hi! link NonText duesBg2
-hi! link SpecialKey duesBg2
+hi! link NonText deusBg2
+hi! link SpecialKey deusBg2
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
@@ -491,21 +491,21 @@ call s:HL('VertSplit', s:fg4, s:vert_split)
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
 
 " Directory names, special names in listing
-hi! link Directory duesGreenBold
+hi! link Directory deusGreenBold
 
 " Titles for output from :set all, :autocmd, etc.
-hi! link Title duesGreenBold
+hi! link Title deusGreenBold
 
 " Error messages on the command line
 call s:HL('ErrorMsg',   s:vim_bg, s:red, s:bold)
 " More prompt: -- More --
-hi! link MoreMsg duesYellowBold
+hi! link MoreMsg deusYellowBold
 " Current mode message: -- INSERT --
-hi! link ModeMsg duesYellowBold
+hi! link ModeMsg deusYellowBold
 " 'Press enter' prompt and yes/no questions
-hi! link Question duesOrangeBold
+hi! link Question deusOrangeBold
 " Warning messages
-hi! link WarningMsg duesRedBold
+hi! link WarningMsg deusRedBold
 
 " }}}
 " Gutter: {{{
@@ -536,8 +536,8 @@ hi! link lCursor Cursor
 " }}}
 " Syntax Highlighting: {{{
 
-if g:dues_improved_strings == 0
-  hi! link Special duesOrange
+if g:deus_improved_strings == 0
+  hi! link Special deusOrange
 else
   call s:HL('Special', s:bg1, s:orange, s:italic)
 endif
@@ -547,61 +547,61 @@ call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
-hi! link Statement duesRed
+hi! link Statement deusRed
 " if, then, else, endif, swicth, etc.
-hi! link Conditional duesRed
+hi! link Conditional deusRed
 " for, do, while, etc.
-hi! link Repeat duesRed
+hi! link Repeat deusRed
 " case, default, etc.
-hi! link Label duesRed
+hi! link Label deusRed
 " try, catch, throw
-hi! link Exception duesRed
+hi! link Exception deusRed
 " sizeof, "+", "*", etc.
 hi! link Operator Normal
 " Any other keyword
-hi! link Keyword duesRed
+hi! link Keyword deusRed
 
 " Variable name
-hi! link Identifier duesBlue
+hi! link Identifier deusBlue
 " Function name
-hi! link Function duesGreenBold
+hi! link Function deusGreenBold
 
 " Generic preprocessor
-hi! link PreProc duesAqua
+hi! link PreProc deusAqua
 " Preprocessor #include
-hi! link Include duesAqua
+hi! link Include deusAqua
 " Preprocessor #define
-hi! link Define duesAqua
+hi! link Define deusAqua
 " Same as Define
-hi! link Macro duesAqua
+hi! link Macro deusAqua
 " Preprocessor #if, #else, #endif, etc.
-hi! link PreCondit duesAqua
+hi! link PreCondit deusAqua
 
 " Generic constant
-hi! link Constant duesPurple
+hi! link Constant deusPurple
 " Character constant: 'c', '/n'
-hi! link Character duesPurple
+hi! link Character deusPurple
 " String constant: "this is a string"
-if g:dues_improved_strings == 0
+if g:deus_improved_strings == 0
   call s:HL('String',  s:green, s:none, s:italicize_strings)
 else
   call s:HL('String',  s:bg1, s:fg1, s:italicize_strings)
 endif
 " Boolean constant: TRUE, false
-hi! link Boolean duesPurple
+hi! link Boolean deusPurple
 " Number constant: 234, 0xff
-hi! link Number duesPurple
+hi! link Number deusPurple
 " Floating point constant: 2.3e10
-hi! link Float duesPurple
+hi! link Float deusPurple
 
 " Generic type
-hi! link Type duesYellow
+hi! link Type deusYellow
 " static, register, volatile, etc
-hi! link StorageClass duesOrange
+hi! link StorageClass deusOrange
 " struct, union, enum, etc.
-hi! link Structure duesAqua
+hi! link Structure deusAqua
 " typedef
-hi! link Typedef duesYellow
+hi! link Typedef deusYellow
 
 " }}}
 " Completion Menu: {{{
@@ -634,7 +634,7 @@ call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 if has("spell")
   " Not capitalised word, or compile warnings
-  if g:dues_improved_warnings == 0
+  if g:deus_improved_warnings == 0
     call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
   else
     call s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
@@ -671,7 +671,7 @@ if !exists('g:indent_guides_auto_colors')
 endif
 
 if g:indent_guides_auto_colors == 0
-  if g:dues_invert_indent_guides == 0
+  if g:deus_invert_indent_guides == 0
     call s:HL('IndentGuidesOdd', s:vim_bg, s:bg2)
     call s:HL('IndentGuidesEven', s:vim_bg, s:bg1)
   else
@@ -720,23 +720,23 @@ let g:niji_light_colours = g:rbpt_colorpairs
 "}}}
 " GitGutter: {{{
 
-hi! link GitGutterAdd duesGreenSign
-hi! link GitGutterChange duesAquaSign
-hi! link GitGutterDelete duesRedSign
-hi! link GitGutterChangeDelete duesAquaSign
+hi! link GitGutterAdd deusGreenSign
+hi! link GitGutterChange deusAquaSign
+hi! link GitGutterDelete deusRedSign
+hi! link GitGutterChangeDelete deusAquaSign
 
 " }}}
 " GitCommit: "{{{
 
-hi! link gitcommitSelectedFile duesGreen
-hi! link gitcommitDiscardedFile duesRed
+hi! link gitcommitSelectedFile deusGreen
+hi! link gitcommitDiscardedFile deusRed
 
 " }}}
 " Signify: {{{
 
-hi! link SignifySignAdd duesGreenSign
-hi! link SignifySignChange duesAquaSign
-hi! link SignifySignDelete duesRedSign
+hi! link SignifySignAdd deusGreenSign
+hi! link SignifySignChange deusAquaSign
+hi! link SignifySignDelete deusRedSign
 
 " }}}
 " Syntastic: {{{
@@ -744,30 +744,30 @@ hi! link SignifySignDelete duesRedSign
 call s:HL('SyntasticError', s:none, s:none, s:undercurl, s:red)
 call s:HL('SyntasticWarning', s:none, s:none, s:undercurl, s:yellow)
 
-hi! link SyntasticErrorSign duesRedSign
-hi! link SyntasticWarningSign duesYellowSign
+hi! link SyntasticErrorSign deusRedSign
+hi! link SyntasticWarningSign deusYellowSign
 
 " }}}
 " Signature: {{{
-hi! link SignatureMarkText   duesBlueSign
-hi! link SignatureMarkerText duesPurpleSign
+hi! link SignatureMarkText   deusBlueSign
+hi! link SignatureMarkerText deusPurpleSign
 
 " }}}
 " ShowMarks: {{{
 
-hi! link ShowMarksHLl duesBlueSign
-hi! link ShowMarksHLu duesBlueSign
-hi! link ShowMarksHLo duesBlueSign
-hi! link ShowMarksHLm duesBlueSign
+hi! link ShowMarksHLl deusBlueSign
+hi! link ShowMarksHLu deusBlueSign
+hi! link ShowMarksHLo deusBlueSign
+hi! link ShowMarksHLm deusBlueSign
 
 " }}}
 " CtrlP: {{{
 
-hi! link CtrlPMatch duesYellow
-hi! link CtrlPNoEntries duesRed
-hi! link CtrlPPrtBase duesBg2
-hi! link CtrlPPrtCursor duesBlue
-hi! link CtrlPLinePre duesBg2
+hi! link CtrlPMatch deusYellow
+hi! link CtrlPNoEntries deusRed
+hi! link CtrlPPrtBase deusBg2
+hi! link CtrlPPrtCursor deusBlue
+hi! link CtrlPLinePre deusBg2
 
 call s:HL('CtrlPMode1', s:blue, s:bg2, s:bold)
 call s:HL('CtrlPMode2', s:bg0, s:blue, s:bold)
@@ -776,15 +776,15 @@ call s:HL('CtrlPStats', s:fg4, s:bg2, s:bold)
 " }}}
 " Startify: {{{
 
-hi! link StartifyBracket duesFg3
-hi! link StartifyFile duesFg0
-hi! link StartifyNumber duesBlue
-hi! link StartifyPath duesGray
-hi! link StartifySlash duesGray
-hi! link StartifySection duesYellow
-hi! link StartifySpecial duesBg2
-hi! link StartifyHeader duesOrange
-hi! link StartifyFooter duesBg2
+hi! link StartifyBracket deusFg3
+hi! link StartifyFile deusFg0
+hi! link StartifyNumber deusBlue
+hi! link StartifyPath deusGray
+hi! link StartifySlash deusGray
+hi! link StartifySection deusYellow
+hi! link StartifySpecial deusBg2
+hi! link StartifyHeader deusOrange
+hi! link StartifyFooter deusBg2
 
 " }}}
 " Vimshell: {{{
@@ -809,31 +809,31 @@ call s:HL('BufTabLineFill', s:bg0, s:bg0)
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{
 
-hi! link diffAdded duesGreen
-hi! link diffRemoved duesRed
-hi! link diffChanged duesAqua
+hi! link diffAdded deusGreen
+hi! link diffRemoved deusRed
+hi! link diffChanged deusAqua
 
-hi! link diffFile duesOrange
-hi! link diffNewFile duesYellow
+hi! link diffFile deusOrange
+hi! link diffNewFile deusYellow
 
-hi! link diffLine duesBlue
+hi! link diffLine deusBlue
 
 " }}}
 " Html: {{{
 
-hi! link htmlTag duesBlue
-hi! link htmlEndTag duesBlue
+hi! link htmlTag deusBlue
+hi! link htmlEndTag deusBlue
 
-hi! link htmlTagName duesAquaBold
-hi! link htmlArg duesAqua
+hi! link htmlTagName deusAquaBold
+hi! link htmlArg deusAqua
 
-hi! link htmlScriptTag duesPurple
-hi! link htmlTagN duesFg1
-hi! link htmlSpecialTagName duesAquaBold
+hi! link htmlScriptTag deusPurple
+hi! link htmlTagN deusFg1
+hi! link htmlSpecialTagName deusAquaBold
 
 call s:HL('htmlLink', s:fg4, s:none, s:underline)
 
-hi! link htmlSpecialChar duesOrange
+hi! link htmlSpecialChar deusOrange
 
 call s:HL('htmlBold', s:vim_fg, s:vim_bg, s:bold)
 call s:HL('htmlBoldUnderline', s:vim_fg, s:vim_bg, s:bold . s:underline)
@@ -847,314 +847,314 @@ call s:HL('htmlItalic', s:vim_fg, s:vim_bg, s:italic)
 " }}}
 " Xml: {{{
 
-hi! link xmlTag duesBlue
-hi! link xmlEndTag duesBlue
-hi! link xmlTagName duesBlue
-hi! link xmlEqual duesBlue
-hi! link docbkKeyword duesAquaBold
+hi! link xmlTag deusBlue
+hi! link xmlEndTag deusBlue
+hi! link xmlTagName deusBlue
+hi! link xmlEqual deusBlue
+hi! link docbkKeyword deusAquaBold
 
-hi! link xmlDocTypeDecl duesGray
-hi! link xmlDocTypeKeyword duesPurple
-hi! link xmlCdataStart duesGray
-hi! link xmlCdataCdata duesPurple
-hi! link dtdFunction duesGray
-hi! link dtdTagName duesPurple
+hi! link xmlDocTypeDecl deusGray
+hi! link xmlDocTypeKeyword deusPurple
+hi! link xmlCdataStart deusGray
+hi! link xmlCdataCdata deusPurple
+hi! link dtdFunction deusGray
+hi! link dtdTagName deusPurple
 
-hi! link xmlAttrib duesAqua
-hi! link xmlProcessingDelim duesGray
-hi! link dtdParamEntityPunct duesGray
-hi! link dtdParamEntityDPunct duesGray
-hi! link xmlAttribPunct duesGray
+hi! link xmlAttrib deusAqua
+hi! link xmlProcessingDelim deusGray
+hi! link dtdParamEntityPunct deusGray
+hi! link dtdParamEntityDPunct deusGray
+hi! link xmlAttribPunct deusGray
 
-hi! link xmlEntity duesOrange
-hi! link xmlEntityPunct duesOrange
+hi! link xmlEntity deusOrange
+hi! link xmlEntityPunct deusOrange
 " }}}
 " Vim: {{{
 
 call s:HL('vimCommentTitle', s:fg4_256, s:none, s:bold . s:italicize_comments)
 
-hi! link vimNotation duesOrange
-hi! link vimBracket duesOrange
-hi! link vimMapModKey duesOrange
-hi! link vimFuncSID duesFg3
-hi! link vimSetSep duesFg3
-hi! link vimSep duesFg3
-hi! link vimContinue duesFg3
+hi! link vimNotation deusOrange
+hi! link vimBracket deusOrange
+hi! link vimMapModKey deusOrange
+hi! link vimFuncSID deusFg3
+hi! link vimSetSep deusFg3
+hi! link vimSep deusFg3
+hi! link vimContinue deusFg3
 
 " }}}
 " Clojure: {{{
 
-hi! link clojureKeyword duesBlue
-hi! link clojureCond duesOrange
-hi! link clojureSpecial duesOrange
-hi! link clojureDefine duesOrange
+hi! link clojureKeyword deusBlue
+hi! link clojureCond deusOrange
+hi! link clojureSpecial deusOrange
+hi! link clojureDefine deusOrange
 
-hi! link clojureFunc duesYellow
-hi! link clojureRepeat duesYellow
-hi! link clojureCharacter duesAqua
-hi! link clojureStringEscape duesAqua
-hi! link clojureException duesRed
+hi! link clojureFunc deusYellow
+hi! link clojureRepeat deusYellow
+hi! link clojureCharacter deusAqua
+hi! link clojureStringEscape deusAqua
+hi! link clojureException deusRed
 
-hi! link clojureRegexp duesAqua
-hi! link clojureRegexpEscape duesAqua
+hi! link clojureRegexp deusAqua
+hi! link clojureRegexpEscape deusAqua
 call s:HL('clojureRegexpCharClass', s:fg3, s:none, s:bold)
 hi! link clojureRegexpMod clojureRegexpCharClass
 hi! link clojureRegexpQuantifier clojureRegexpCharClass
 
-hi! link clojureParen duesFg3
-hi! link clojureAnonArg duesYellow
-hi! link clojureVariable duesBlue
-hi! link clojureMacro duesOrange
+hi! link clojureParen deusFg3
+hi! link clojureAnonArg deusYellow
+hi! link clojureVariable deusBlue
+hi! link clojureMacro deusOrange
 
-hi! link clojureMeta duesYellow
-hi! link clojureDeref duesYellow
-hi! link clojureQuote duesYellow
-hi! link clojureUnquote duesYellow
+hi! link clojureMeta deusYellow
+hi! link clojureDeref deusYellow
+hi! link clojureQuote deusYellow
+hi! link clojureUnquote deusYellow
 
 " }}}
 " C: {{{
 
-hi! link cOperator duesPurple
-hi! link cStructure duesOrange
+hi! link cOperator deusPurple
+hi! link cStructure deusOrange
 
 " }}}
 " Python: {{{
 
-hi! link pythonBuiltin duesOrange
-hi! link pythonBuiltinObj duesOrange
-hi! link pythonBuiltinFunc duesOrange
-hi! link pythonFunction duesAqua
-hi! link pythonDecorator duesRed
-hi! link pythonInclude duesBlue
-hi! link pythonImport duesBlue
-hi! link pythonRun duesBlue
-hi! link pythonCoding duesBlue
-hi! link pythonOperator duesRed
-hi! link pythonExceptions duesPurple
-hi! link pythonBoolean duesPurple
-hi! link pythonDot duesFg3
+hi! link pythonBuiltin deusOrange
+hi! link pythonBuiltinObj deusOrange
+hi! link pythonBuiltinFunc deusOrange
+hi! link pythonFunction deusAqua
+hi! link pythonDecorator deusRed
+hi! link pythonInclude deusBlue
+hi! link pythonImport deusBlue
+hi! link pythonRun deusBlue
+hi! link pythonCoding deusBlue
+hi! link pythonOperator deusRed
+hi! link pythonExceptions deusPurple
+hi! link pythonBoolean deusPurple
+hi! link pythonDot deusFg3
 
 " }}}
 " CSS: {{{
 
-hi! link cssBraces duesBlue
-hi! link cssFunctionName duesYellow
-hi! link cssIdentifier duesOrange
-hi! link cssClassName duesGreen
-hi! link cssColor duesBlue
-hi! link cssSelectorOp duesBlue
-hi! link cssSelectorOp2 duesBlue
-hi! link cssImportant duesGreen
-hi! link cssVendor duesFg1
+hi! link cssBraces deusBlue
+hi! link cssFunctionName deusYellow
+hi! link cssIdentifier deusOrange
+hi! link cssClassName deusGreen
+hi! link cssColor deusBlue
+hi! link cssSelectorOp deusBlue
+hi! link cssSelectorOp2 deusBlue
+hi! link cssImportant deusGreen
+hi! link cssVendor deusFg1
 
-hi! link cssTextProp duesAqua
-hi! link cssAnimationProp duesAqua
-hi! link cssUIProp duesYellow
-hi! link cssTransformProp duesAqua
-hi! link cssTransitionProp duesAqua
-hi! link cssPrintProp duesAqua
-hi! link cssPositioningProp duesYellow
-hi! link cssBoxProp duesAqua
-hi! link cssFontDescriptorProp duesAqua
-hi! link cssFlexibleBoxProp duesAqua
-hi! link cssBorderOutlineProp duesAqua
-hi! link cssBackgroundProp duesAqua
-hi! link cssMarginProp duesAqua
-hi! link cssListProp duesAqua
-hi! link cssTableProp duesAqua
-hi! link cssFontProp duesAqua
-hi! link cssPaddingProp duesAqua
-hi! link cssDimensionProp duesAqua
-hi! link cssRenderProp duesAqua
-hi! link cssColorProp duesAqua
-hi! link cssGeneratedContentProp duesAqua
+hi! link cssTextProp deusAqua
+hi! link cssAnimationProp deusAqua
+hi! link cssUIProp deusYellow
+hi! link cssTransformProp deusAqua
+hi! link cssTransitionProp deusAqua
+hi! link cssPrintProp deusAqua
+hi! link cssPositioningProp deusYellow
+hi! link cssBoxProp deusAqua
+hi! link cssFontDescriptorProp deusAqua
+hi! link cssFlexibleBoxProp deusAqua
+hi! link cssBorderOutlineProp deusAqua
+hi! link cssBackgroundProp deusAqua
+hi! link cssMarginProp deusAqua
+hi! link cssListProp deusAqua
+hi! link cssTableProp deusAqua
+hi! link cssFontProp deusAqua
+hi! link cssPaddingProp deusAqua
+hi! link cssDimensionProp deusAqua
+hi! link cssRenderProp deusAqua
+hi! link cssColorProp deusAqua
+hi! link cssGeneratedContentProp deusAqua
 
 " }}}
 " JavaScript: {{{
 
-hi! link javaScriptBraces duesFg1
-hi! link javaScriptFunction duesAqua
-hi! link javaScriptIdentifier duesRed
-hi! link javaScriptMember duesBlue
-hi! link javaScriptNumber duesPurple
-hi! link javaScriptNull duesPurple
-hi! link javaScriptParens duesFg3
+hi! link javaScriptBraces deusFg1
+hi! link javaScriptFunction deusAqua
+hi! link javaScriptIdentifier deusRed
+hi! link javaScriptMember deusBlue
+hi! link javaScriptNumber deusPurple
+hi! link javaScriptNull deusPurple
+hi! link javaScriptParens deusFg3
 
 " }}}
 " YAJS: {{{
 
-hi! link javascriptImport duesAqua
-hi! link javascriptExport duesAqua
-hi! link javascriptClassKeyword duesAqua
-hi! link javascriptClassExtends duesAqua
-hi! link javascriptDefault duesAqua
+hi! link javascriptImport deusAqua
+hi! link javascriptExport deusAqua
+hi! link javascriptClassKeyword deusAqua
+hi! link javascriptClassExtends deusAqua
+hi! link javascriptDefault deusAqua
 
-hi! link javascriptClassName duesYellow
-hi! link javascriptClassSuperName duesYellow
-hi! link javascriptGlobal duesYellow
+hi! link javascriptClassName deusYellow
+hi! link javascriptClassSuperName deusYellow
+hi! link javascriptGlobal deusYellow
 
-hi! link javascriptEndColons duesFg1
-hi! link javascriptFuncArg duesFg1
-hi! link javascriptGlobalMethod duesFg1
-hi! link javascriptNodeGlobal duesFg1
+hi! link javascriptEndColons deusFg1
+hi! link javascriptFuncArg deusFg1
+hi! link javascriptGlobalMethod deusFg1
+hi! link javascriptNodeGlobal deusFg1
 
-" hi! link javascriptVariable duesOrange
-hi! link javascriptVariable duesPurple
-" hi! link javascriptIdentifier duesOrange
-" hi! link javascriptClassSuper duesOrange
-hi! link javascriptIdentifier duesOrange
-hi! link javascriptClassSuper duesOrange
+" hi! link javascriptVariable deusOrange
+hi! link javascriptVariable deusPurple
+" hi! link javascriptIdentifier deusOrange
+" hi! link javascriptClassSuper deusOrange
+hi! link javascriptIdentifier deusOrange
+hi! link javascriptClassSuper deusOrange
 
-" hi! link javascriptFuncKeyword duesOrange
-" hi! link javascriptAsyncFunc duesOrange
-hi! link javascriptFuncKeyword duesAqua
-hi! link javascriptAsyncFunc duesAqua
-hi! link javascriptClassStatic duesOrange
+" hi! link javascriptFuncKeyword deusOrange
+" hi! link javascriptAsyncFunc deusOrange
+hi! link javascriptFuncKeyword deusAqua
+hi! link javascriptAsyncFunc deusAqua
+hi! link javascriptClassStatic deusOrange
 
-hi! link javascriptOperator duesRed
-hi! link javascriptForOperator duesRed
-hi! link javascriptYield duesRed
-hi! link javascriptExceptions duesRed
-hi! link javascriptMessage duesRed
+hi! link javascriptOperator deusRed
+hi! link javascriptForOperator deusRed
+hi! link javascriptYield deusRed
+hi! link javascriptExceptions deusRed
+hi! link javascriptMessage deusRed
 
-hi! link javascriptTemplateSB duesAqua
-hi! link javascriptTemplateSubstitution duesFg1
+hi! link javascriptTemplateSB deusAqua
+hi! link javascriptTemplateSubstitution deusFg1
 
-" hi! link javascriptLabel duesBlue
-" hi! link javascriptObjectLabel duesBlue
-" hi! link javascriptPropertyName duesBlue
-hi! link javascriptLabel duesFg1
-hi! link javascriptObjectLabel duesFg1
-hi! link javascriptPropertyName duesFg1
+" hi! link javascriptLabel deusBlue
+" hi! link javascriptObjectLabel deusBlue
+" hi! link javascriptPropertyName deusBlue
+hi! link javascriptLabel deusFg1
+hi! link javascriptObjectLabel deusFg1
+hi! link javascriptPropertyName deusFg1
 
-hi! link javascriptLogicSymbols duesFg1
-hi! link javascriptArrowFunc duesFg1
+hi! link javascriptLogicSymbols deusFg1
+hi! link javascriptArrowFunc deusFg1
 
-hi! link javascriptDocParamName duesFg4
-hi! link javascriptDocTags duesFg4
-hi! link javascriptDocNotation duesFg4
-hi! link javascriptDocParamType duesFg4
-hi! link javascriptDocNamedParamType duesFg4
+hi! link javascriptDocParamName deusFg4
+hi! link javascriptDocTags deusFg4
+hi! link javascriptDocNotation deusFg4
+hi! link javascriptDocParamType deusFg4
+hi! link javascriptDocNamedParamType deusFg4
 
 " }}}
 " CoffeeScript: {{{
 
-hi! link coffeeExtendedOp duesFg3
-hi! link coffeeSpecialOp duesFg3
-hi! link coffeeCurly duesOrange
-hi! link coffeeParen duesFg3
-hi! link coffeeBracket duesOrange
+hi! link coffeeExtendedOp deusFg3
+hi! link coffeeSpecialOp deusFg3
+hi! link coffeeCurly deusOrange
+hi! link coffeeParen deusFg3
+hi! link coffeeBracket deusOrange
 
 " }}}
 " Ruby: {{{
 
-hi! link rubyStringDelimiter duesGreen
-hi! link rubyInterpolationDelimiter duesAqua
+hi! link rubyStringDelimiter deusGreen
+hi! link rubyInterpolationDelimiter deusAqua
 
 " }}}
 " ObjectiveC: {{{
 
-hi! link objcTypeModifier duesRed
-hi! link objcDirective duesBlue
+hi! link objcTypeModifier deusRed
+hi! link objcDirective deusBlue
 
 " }}}
 " Go: {{{
 
-hi! link goDirective duesAqua
-hi! link goConstants duesPurple
-hi! link goDeclaration duesRed
-hi! link goDeclType duesBlue
-hi! link goBuiltins duesOrange
+hi! link goDirective deusAqua
+hi! link goConstants deusPurple
+hi! link goDeclaration deusRed
+hi! link goDeclType deusBlue
+hi! link goBuiltins deusOrange
 
 " }}}
 " Lua: {{{
 
-hi! link luaIn duesRed
-hi! link luaFunction duesAqua
-hi! link luaTable duesOrange
+hi! link luaIn deusRed
+hi! link luaFunction deusAqua
+hi! link luaTable deusOrange
 
 " }}}
 " MoonScript: {{{
 
-hi! link moonSpecialOp duesFg3
-hi! link moonExtendedOp duesFg3
-hi! link moonFunction duesFg3
-hi! link moonObject duesYellow
+hi! link moonSpecialOp deusFg3
+hi! link moonExtendedOp deusFg3
+hi! link moonFunction deusFg3
+hi! link moonObject deusYellow
 
 " }}}
 " Java: {{{
 
-hi! link javaAnnotation duesBlue
-hi! link javaDocTags duesAqua
+hi! link javaAnnotation deusBlue
+hi! link javaDocTags deusAqua
 hi! link javaCommentTitle vimCommentTitle
-hi! link javaParen duesFg3
-hi! link javaParen1 duesFg3
-hi! link javaParen2 duesFg3
-hi! link javaParen3 duesFg3
-hi! link javaParen4 duesFg3
-hi! link javaParen5 duesFg3
-hi! link javaOperator duesOrange
+hi! link javaParen deusFg3
+hi! link javaParen1 deusFg3
+hi! link javaParen2 deusFg3
+hi! link javaParen3 deusFg3
+hi! link javaParen4 deusFg3
+hi! link javaParen5 deusFg3
+hi! link javaOperator deusOrange
 
-hi! link javaVarArg duesGreen
+hi! link javaVarArg deusGreen
 
 " }}}
 " Elixir: {{{
 
 hi! link elixirDocString Comment
 
-hi! link elixirStringDelimiter duesGreen
-hi! link elixirInterpolationDelimiter duesAqua
+hi! link elixirStringDelimiter deusGreen
+hi! link elixirInterpolationDelimiter deusAqua
 
 " }}}
 " Scala: {{{
 
 " NB: scala vim syntax file is kinda horrible
-hi! link scalaNameDefinition duesFg1
-hi! link scalaCaseFollowing duesFg1
-hi! link scalaCapitalWord duesFg1
-hi! link scalaTypeExtension duesFg1
+hi! link scalaNameDefinition deusFg1
+hi! link scalaCaseFollowing deusFg1
+hi! link scalaCapitalWord deusFg1
+hi! link scalaTypeExtension deusFg1
 
-hi! link scalaKeyword duesRed
-hi! link scalaKeywordModifier duesRed
+hi! link scalaKeyword deusRed
+hi! link scalaKeywordModifier deusRed
 
-hi! link scalaSpecial duesAqua
-hi! link scalaOperator duesFg1
+hi! link scalaSpecial deusAqua
+hi! link scalaOperator deusFg1
 
-hi! link scalaTypeDeclaration duesYellow
-hi! link scalaTypeTypePostDeclaration duesYellow
+hi! link scalaTypeDeclaration deusYellow
+hi! link scalaTypeTypePostDeclaration deusYellow
 
-hi! link scalaInstanceDeclaration duesFg1
-hi! link scalaInterpolation duesAqua
+hi! link scalaInstanceDeclaration deusFg1
+hi! link scalaInterpolation deusAqua
 
 " }}}
 " Markdown: {{{
 
 call s:HL('markdownItalic', s:fg3, s:none, s:italic)
 
-hi! link markdownH1 duesGreenBold
-hi! link markdownH2 duesGreenBold
-hi! link markdownH3 duesYellowBold
-hi! link markdownH4 duesYellowBold
-hi! link markdownH5 duesYellow
-hi! link markdownH6 duesYellow
+hi! link markdownH1 deusGreenBold
+hi! link markdownH2 deusGreenBold
+hi! link markdownH3 deusYellowBold
+hi! link markdownH4 deusYellowBold
+hi! link markdownH5 deusYellow
+hi! link markdownH6 deusYellow
 
-hi! link markdownCode duesAqua
-hi! link markdownCodeBlock duesAqua
-hi! link markdownCodeDelimiter duesAqua
+hi! link markdownCode deusAqua
+hi! link markdownCodeBlock deusAqua
+hi! link markdownCodeDelimiter deusAqua
 
-hi! link markdownBlockquote duesGray
-hi! link markdownListMarker duesGray
-hi! link markdownOrderedListMarker duesGray
-hi! link markdownRule duesGray
-hi! link markdownHeadingRule duesGray
+hi! link markdownBlockquote deusGray
+hi! link markdownListMarker deusGray
+hi! link markdownOrderedListMarker deusGray
+hi! link markdownRule deusGray
+hi! link markdownHeadingRule deusGray
 
-hi! link markdownUrlDelimiter duesFg3
-hi! link markdownLinkDelimiter duesFg3
-hi! link markdownLinkTextDelimiter duesFg3
+hi! link markdownUrlDelimiter deusFg3
+hi! link markdownLinkDelimiter deusFg3
+hi! link markdownLinkTextDelimiter deusFg3
 
-hi! link markdownHeadingDelimiter duesOrange
-hi! link markdownUrl duesPurple
-hi! link markdownUrlTitleDelimiter duesGreen
+hi! link markdownHeadingDelimiter deusOrange
+hi! link markdownUrl deusPurple
+hi! link markdownUrlTitleDelimiter deusGreen
 
 call s:HL('markdownLinkText', s:gray, s:none, s:underline)
 hi! link markdownIdDeclaration markdownLinkText
@@ -1162,44 +1162,44 @@ hi! link markdownIdDeclaration markdownLinkText
 " }}}
 " Haskell: {{{
 
-" hi! link haskellType duesYellow
-" hi! link haskellOperators duesOrange
-" hi! link haskellConditional duesAqua
-" hi! link haskellLet duesOrange
+" hi! link haskellType deusYellow
+" hi! link haskellOperators deusOrange
+" hi! link haskellConditional deusAqua
+" hi! link haskellLet deusOrange
 "
-hi! link haskellType duesFg1
-hi! link haskellIdentifier duesFg1
-hi! link haskellSeparator duesFg1
-hi! link haskellDelimiter duesFg4
-hi! link haskellOperators duesBlue
+hi! link haskellType deusFg1
+hi! link haskellIdentifier deusFg1
+hi! link haskellSeparator deusFg1
+hi! link haskellDelimiter deusFg4
+hi! link haskellOperators deusBlue
 "
-hi! link haskellBacktick duesOrange
-hi! link haskellStatement duesOrange
-hi! link haskellConditional duesOrange
+hi! link haskellBacktick deusOrange
+hi! link haskellStatement deusOrange
+hi! link haskellConditional deusOrange
 
-hi! link haskellLet duesAqua
-hi! link haskellDefault duesAqua
-hi! link haskellWhere duesAqua
-hi! link haskellBottom duesAqua
-hi! link haskellBlockKeywords duesAqua
-hi! link haskellImportKeywords duesAqua
-hi! link haskellDeclKeyword duesAqua
-hi! link haskellDeriving duesAqua
-hi! link haskellAssocType duesAqua
+hi! link haskellLet deusAqua
+hi! link haskellDefault deusAqua
+hi! link haskellWhere deusAqua
+hi! link haskellBottom deusAqua
+hi! link haskellBlockKeywords deusAqua
+hi! link haskellImportKeywords deusAqua
+hi! link haskellDeclKeyword deusAqua
+hi! link haskellDeriving deusAqua
+hi! link haskellAssocType deusAqua
 
-hi! link haskellNumber duesPurple
-hi! link haskellPragma duesPurple
+hi! link haskellNumber deusPurple
+hi! link haskellPragma deusPurple
 
-hi! link haskellString duesGreen
-hi! link haskellChar duesGreen
+hi! link haskellString deusGreen
+hi! link haskellChar deusGreen
 
 " }}}
 " Json: {{{
 
-hi! link jsonKeyword duesGreen
-hi! link jsonQuote duesGreen
-hi! link jsonBraces duesFg1
-hi! link jsonString duesFg1
+hi! link jsonKeyword deusGreen
+hi! link jsonQuote deusGreen
+hi! link jsonBraces deusFg1
+hi! link jsonString deusFg1
 
 " }}}
 
@@ -1207,11 +1207,11 @@ hi! link jsonString duesFg1
 " Functions -------------------------------------------------------------------
 " Search Highlighting Cursor {{{
 
-function! DuesHlsShowCursor()
+function! deusHlsShowCursor()
   call s:HL('Cursor', s:bg0, s:hls_cursor)
 endfunction
 
-function! DuesHlsHideCursor()
+function! deusHlsHideCursor()
   call s:HL('Cursor', s:none, s:none, s:inverse)
 endfunction
 
