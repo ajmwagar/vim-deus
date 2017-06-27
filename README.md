@@ -22,6 +22,9 @@ GVIM + Pylint + Syntastic:
 
 ![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Pylint.png "deus Colorscheme")
 
+Airline theme
+![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Airline.png)
+
 ---
 
 ## Installation
