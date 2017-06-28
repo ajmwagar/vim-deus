@@ -1207,11 +1207,11 @@ hi! link jsonString deusFg1
 " Functions -------------------------------------------------------------------
 " Search Highlighting Cursor {{{
 
-function! deusHlsShowCursor()
+function! DeusHlsShowCursor()
   call s:HL('Cursor', s:bg0, s:hls_cursor)
 endfunction
 
-function! deusHlsHideCursor()
+function! DeusHlsHideCursor()
   call s:HL('Cursor', s:none, s:none, s:inverse)
 endfunction
 
