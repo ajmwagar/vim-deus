@@ -3,7 +3,7 @@
 " Description: a retro-modern colorscheme in Vim
 " Author: ajmwagar
 " Source: https://github.com/ajmwagar/deus
-" Last Modified: 04 Sep 2015
+" Last Modified: 14 Nov 2017
 " -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------
@@ -65,10 +65,6 @@ if !exists('g:deus_invert_indent_guides')
   let g:deus_invert_indent_guides=0
 endif
 
-if exists('g:deus_contrast')
-  echo 'g:deus_contrast is deprecated; use g:deus_contrast_light and g:deus_contrast_dark instead'
-endif
-
 if !exists('g:deus_contrast_dark')
   let g:deus_contrast_dark='medium'
 endif
@@ -91,7 +87,7 @@ let s:ds.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:ds.dark2       = ['#2C313A', 239]     " 80-73-69
 let s:ds.dark3       = ['#665c54', 241]     " 102-92-84
 let s:ds.dark4       = ['#7c6f64', 243]     " 124-111-100
-let s:ds.dark4_256       = ['#7c6f64', 243]     " 124-111-100
+let s:ds.dark4_256   = ['#7c6f64', 243]     " 124-111-100
 
 let s:ds.gray_245    = ['#928374', 245]     " 146-131-116
 let s:ds.gray_244    = ['#928374', 244]     " 146-131-116
@@ -147,6 +143,7 @@ let s:vim_fg = ['fg', 'fg']
 let s:none = ['NONE', 'NONE']
 
 " determine relative colors
+  let s:bg0  = s:ds.dark0
   let s:bg1  = s:ds.dark1
   let s:bg2  = s:ds.dark2
   let s:bg3  = s:ds.dark3
@@ -436,7 +433,7 @@ hi! link Directory deusGreenBold
 hi! link Title deusGreenBold
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   s:vim_bg, s:red, s:bold)
+call s:HL('ErrorMsg',   s:red, s:bg1, s:bold)
 " More prompt: -- More --
 hi! link MoreMsg deusYellowBold
 " Current mode message: -- INSERT --
@@ -484,6 +481,7 @@ endif
 call s:HL('Comment', s:gray, s:none, s:italicize_comments)
 call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
+"call s:HL("Error", { "fg": s:red, "bg": s:vim_bg }) " any erroneous construct
 
 " Generic statement
 hi! link Statement deusRed
