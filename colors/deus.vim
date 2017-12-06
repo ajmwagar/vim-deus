@@ -1169,5 +1169,7 @@ hi! link SignColumn LineNr
 
     hi! CursorLine guibg=#292f37
     hi! ColorColumn guibg=#292f37
+    hi  Folded guibg=#242a32
+    hi! FoldColumn guibg=#242a32
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
