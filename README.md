@@ -130,6 +130,8 @@ To fix this add the following snippet to your ~/.vimrc:
 
 > _Please not this does **not** work with tmux (you will have a brownish background)._
 
+If you use vim in a terminal that supports italics, in order to have italics enable with vim-deus, set the environment variable TERM_ITALICS to TRUE.
+
 ---
 
 ## Thank You
