@@ -1080,7 +1080,7 @@ hi! link markdownCodeBlock deusAqua
 hi! link markdownCodeDelimiter deusAqua
 
 hi! link markdownBlockquote deusGray
-hi! link markdownListMarker deusGray
+hi! link markdownListMarker deusPurple
 hi! link markdownOrderedListMarker deusGray
 hi! link markdownRule deusGray
 hi! link markdownHeadingRule deusGray
