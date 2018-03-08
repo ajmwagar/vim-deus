@@ -25,6 +25,13 @@ GVIM + Pylint + Syntastic:
 Airline theme
 ![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Airline.png)
 
+Terminal (Neo)vim
+
+![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/duesLinux.jpeg?raw=true)
+
+NERDTree
+![img](![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/duesNerdtree.jpeg?raw=true)
+
 ---
 
 ## Installation
