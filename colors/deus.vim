@@ -81,8 +81,9 @@ let s:is_dark=(&background == 'dark')
 " setup palette dictionary
 let s:ds = {}
 
+
 " fill it with absolute colors
-let s:ds.dark0       = ['#2C323B', 235]     " 40-40-40
+let s:ds.dark0       = ['#2C323B', 235]     " 40-40-40 Background
 let s:ds.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:ds.dark2       = ['#2C313A', 239]     " 80-73-69
 let s:ds.dark3       = ['#665c54', 241]     " 102-92-84
@@ -461,7 +462,7 @@ call s:HL('FoldColumn', s:gray, s:bg1)
 " Cursor: {{{
 
 " Character under cursor
-call s:HL('Cursor', s:none, s:none, s:inverse)
+"call s:HL('Cursor', s:none, s:none, s:inverse)
 " Visual mode cursor, selection
 hi! link vCursor Cursor
 " Input moder cursor
