@@ -856,6 +856,33 @@ hi! link cOperator deusPurple
 hi! link cStructure deusOrange
 
 " }}}
+
+" C++ {{{
+
+NamespaceTag
+hi! link  NamespaceAliasTag deusPurpleBold
+hi! link  ClassTag duesOrange
+hi! link  StructureTag deusOrange
+hi! link  EnumTag deusAqua
+hi! link  EnumValueTag deusAqua
+hi! link  UnionTag deusPurple
+hi! link  FieldTag deusPurple
+hi! link  LocalVariableTag deusOrange
+hi! link  FunctionTag deusGreen 
+hi! link  MethodTag deusGreen
+hi! link  FunctionParameterTag deusPurpleBold 
+hi! link  TemplateTypeParameterTag deusPurple
+hi! link  TemplateNonTypeParameterTag deusRedBold
+hi! link  TemplateTemplateParameterTag deusRed
+hi! link  MacroDefinitionTag deusBlue
+hi! link  MacroInstantiationTag deusBlue
+hi! link  TypedefTag deusPurple
+hi! link  UsingDirectiveTag deusOrange
+hi! link  UsingDeclarationTag deusOrange
+
+
+" }}}
+
 " Python: {{{
 
 hi! link pythonBuiltin deusOrange
