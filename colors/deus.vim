@@ -859,7 +859,7 @@ hi! link cStructure deusOrange
 
 " C++ {{{
 
-NamespaceTag
+hi! link  NamespaceTag deusPurpleBold
 hi! link  NamespaceAliasTag deusPurpleBold
 hi! link  ClassTag duesOrange
 hi! link  StructureTag deusOrange
