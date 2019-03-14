@@ -1,0 +1,25 @@
+{
+  "name": "deus",
+  "author": "Avery Wagar",
+  "color": [
+    "#000000",
+    "#d54e53",
+    "#98c379",
+    "#e5c07b",
+    "#83a598",
+    "#c678dd",
+    "#70c0ba",
+    "#ffffff",
+    "#666666",
+    "#ec3e45",
+    "#90c966",
+    "#edbf69",
+    "#73ba9f",
+    "#c858e9",
+    "#2bcec2",
+    "#ffffff"
+  ],
+  "foreground": "#eaeaea",
+  "background": "#2c323b"
+}
+
