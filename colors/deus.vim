@@ -217,7 +217,7 @@ if exists('g:deus_hls_cursor')
 endif
 
 let s:number_column = s:bg4
-let s:sign_column = s:bg1
+let s:sign_column = s:bg2
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
@@ -588,6 +588,16 @@ endif
 " }}}
 
 " Plugin specific -------------------------------------------------------------
+" Cocnvim: {{{
+" Symbols
+highlight link CocErrorSign deusRedSign
+highlight link CocWarningSign deusOrangeSign
+highlight link CocInfoSign deusAquaSign
+highlight link CocHintSign deusGreenSign
+
+" Text highlights
+call s:HL('CocHighlightText', s:fg1, s:bg2)
+"}}}
 " EasyMotion: {{{
 
 hi! link EasyMotionTarget Search
