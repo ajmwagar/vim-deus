@@ -146,9 +146,9 @@ let s:none = ['NONE', 'NONE']
 " determine relative colors
   let s:bg0  = s:ds.dark0
   let s:bg1  = s:ds.dark1
-  let s:bg2  = s:ds.dark2 " Splits 
-  let s:bg3  = s:ds.dark3 " MatchParen
-  let s:bg4  = s:ds.dark4 " Number Column
+  let s:bg2  = s:ds.dark2
+  let s:bg3  = s:ds.dark3
+  let s:bg4  = s:ds.dark4
 
   let s:gray = s:ds.gray_245
 
