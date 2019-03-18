@@ -381,7 +381,7 @@ endif
 
 if version >= 700
   " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:bg1)
+  call s:HL('CursorLine',   s:none, s:bg2)
   " Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
@@ -389,6 +389,7 @@ if version >= 700
   call s:HL('TabLineFill', s:bg4, s:vim_bg, s:invert_tabline)
   " Active tab page label
   call s:HL('TabLineSel', s:vim_bg, s:bg4, s:bold . s:invert_tabline)
+
   " Not active tab page label
   hi! link TabLine TabLineFill
 
@@ -404,7 +405,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg1)
+  call s:HL('CursorLineNr', s:yellow, s:bg2)
 endif
 
 hi! link NonText deusBg2
@@ -747,9 +748,9 @@ let g:vimshell_escape_colors = [
 " }}}
 " BufTabLine: {{{
 
-call s:HL('BufTabLineCurrent', s:bg0, s:fg4)
+call s:HL('BufTabLineCurrent', s:bg0, s:green)
 call s:HL('BufTabLineActive', s:fg4, s:bg2)
-call s:HL('BufTabLineHidden', s:bg4, s:bg1)
+call s:HL('BufTabLineHidden', s:bg4, s:bg2)
 call s:HL('BufTabLineFill', s:bg0, s:bg0)
 
 " }}}
