@@ -405,7 +405,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg2)
+  call s:HL('CursorLineNr', s:fg1, s:bg2)
 endif
 
 hi! link NonText deusBg2
@@ -419,8 +419,8 @@ call s:HL('IncSearch', s:bg0, s:hls_cursor)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg4, s:bg0, s:bold . s:inverse)
-call s:HL('StatusLineNC', s:bg2, s:fg4, s:bold . s:inverse)
+call s:HL('StatusLine',   s:bg2, s:fg1, s:bold . s:inverse)
+call s:HL('StatusLineNC', s:bg2, s:fg1, s:bold . s:inverse)
 
 " The column separating vertically split windows
 call s:HL('VertSplit', s:fg4, s:vert_split)
@@ -455,9 +455,9 @@ call s:HL('LineNr', s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:gray, s:bg2, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:bg2)
 
 " }}}
 " Cursor: {{{
@@ -686,6 +686,9 @@ hi! link gitcommitDiscardedFile deusRed
 hi! link SignifySignAdd deusGreenSign
 hi! link SignifySignChange deusAquaSign
 hi! link SignifySignDelete deusRedSign
+" hi! SignifySignAdd guibg=#242a32 guifg=#99c379
+" hi! SignifySignDelete guibg=#242a32 guifg=#fb4733
+" hi! SignifySignChange guibg=#242a32 guifg=#8ec07b
 
 " }}}
 " Syntastic: {{{
@@ -695,6 +698,8 @@ call s:HL('SyntasticWarning', s:none, s:none, s:undercurl, s:yellow)
 
 hi! link SyntasticErrorSign deusRedSign
 hi! link SyntasticWarningSign deusYellowSign
+hi! link AleWarningSign deusYellowSign
+hi! link AleErrorSign deusRedSign
 
 " }}}
 " Signature: {{{
@@ -750,8 +755,8 @@ let g:vimshell_escape_colors = [
 
 call s:HL('BufTabLineCurrent', s:bg0, s:green)
 call s:HL('BufTabLineActive', s:fg4, s:bg2)
-call s:HL('BufTabLineHidden', s:bg4, s:bg2)
-call s:HL('BufTabLineFill', s:bg0, s:bg0)
+call s:HL('BufTabLineHidden', s:fg1, s:bg2)
+call s:HL('BufTabLineFill', s:bg0, s:bg2)
 
 " }}}
 
@@ -1193,22 +1198,6 @@ endfunction
 
 " }}}
 
-hi! link SignColumn LineNr
-    hi! VertSplit guibg=#242a32
-    hi! StatusLine guifg=#242a32 guibg=#ebdab2
-    hi! StatusLineNC guifg=#242a32 guibg=#ebdab2
-    hi! CursorLineNr guibg=#242a32 guifg=#ebdab2
 
-    hi! SignColumn guibg=#242a32
-    hi! SignifySignAdd guibg=#242a32 guifg=#99c379
-    hi! SignifySignDelete guibg=#242a32 guifg=#fb4733
-    hi! SignifySignChange guibg=#242a32 guifg=#8ec07b
-
-    hi! AleWarningSign guibg=#242a32 guifg=#ebdab2
-
-    hi! CursorLine guibg=#292f37
-    hi! ColorColumn guibg=#292f37
-    hi  Folded guibg=#242a32
-    hi! FoldColumn guibg=#242a32
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
