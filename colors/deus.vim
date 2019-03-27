@@ -592,7 +592,7 @@ endif
 " Cocnvim: {{{
 " Symbols
 highlight link CocErrorSign deusRedSign
-highlight link CocWarningSign deusOrangeSign
+highlight link CocWarningSign deusYellowSign
 highlight link CocInfoSign deusAquaSign
 highlight link CocHintSign deusGreenSign
 
