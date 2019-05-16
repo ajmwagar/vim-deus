@@ -95,6 +95,7 @@ Don't forget to run:
 - **Python**
 - Clojure
 - XML
+- Any many more... (try [vim-polyglot](https://github.com/sheerun/vim-polyglot) for syntax packs)
 
 **Bold** = really nice looking (They all look good but these are my personal favorites.)
 
