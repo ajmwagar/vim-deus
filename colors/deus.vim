@@ -408,8 +408,9 @@ if version >= 703
   call s:HL('CursorLineNr', s:fg1, s:bg2)
 endif
 
-hi! link NonText deusBg2
-hi! link SpecialKey deusBg2
+" Weird black color
+hi! link NonText duesOrange
+hi! link SpecialKey deusOrange
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
