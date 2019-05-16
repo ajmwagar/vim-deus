@@ -140,7 +140,9 @@ To fix this add the following snippet to your ~/.vimrc:
 
 Instructions on how to enable TrueColor for Tmux can be found [here](https://gist.github.com/parmort/4d95555b3f9435fa953f0b7c67c86e8f).
 
-If you use vim in a terminal that supports italics, in order to have italics enable with vim-deus, set the environment variable TERM_ITALICS to TRUE.
+### Italics
+
+If you use vim in a terminal that supports italics, set the environment variable TERM_ITALICS to TRUE to enable with vim-deus.
 
 ---
 
