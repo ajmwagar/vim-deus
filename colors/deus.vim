@@ -758,6 +758,9 @@ call s:HL('BufTabLineActive', s:fg4, s:bg2)
 call s:HL('BufTabLineHidden', s:fg1, s:bg2)
 call s:HL('BufTabLineFill', s:bg0, s:bg2)
 
+hi StatusLine ctermbg=10 ctermfg=10 cterm=bold guibg=NONE guifg=NONE gui=NONE
+hi StatusLineNC ctermbg=10 ctermfg=10 cterm=NONE guibg=NONE guifg=NONE gui=NONE
+
 " }}}
 
 " Filetype specific -----------------------------------------------------------
