@@ -408,8 +408,9 @@ if version >= 703
   call s:HL('CursorLineNr', s:fg1, s:bg2)
 endif
 
-hi! link NonText deusBg2
-hi! link SpecialKey deusBg2
+" Weird black color breaks 
+hi! link NonText deusGreen 
+hi! link SpecialKey deusOrange
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
@@ -592,7 +593,7 @@ endif
 " Cocnvim: {{{
 " Symbols
 highlight link CocErrorSign deusRedSign
-highlight link CocWarningSign deusOrangeSign
+highlight link CocWarningSign deusYellowSign
 highlight link CocInfoSign deusAquaSign
 highlight link CocHintSign deusGreenSign
 
