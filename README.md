@@ -3,7 +3,7 @@
 Deus was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones.
 I was tired of them. I needed something original, something new. So if you are like me, and I believe many of you are...
 
-I present you **deus** 
+I present you **deus**
 
 ---
 
@@ -146,20 +146,17 @@ When using terminal-vim and vim-deus the colors
 can get messed up.
 
 To fix this add the following snippet to your ~/.vimrc:
+```vim
+set t_Co=256
+set termguicolors
 
-`set t_Co=256`
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-`set termguicolors` 
-
-`let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"`
-
-`let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"`
-
-`set background=dark    " Setting dark mode`
-
-`colorscheme deus`
-
-`let g:deus_termcolors=256`
+set background=dark    " Setting dark mode
+colorscheme deus
+let g:deus_termcolors=256
+```
 
 ### Tmux
 
@@ -167,7 +164,7 @@ Instructions on how to enable TrueColor for Tmux can be found [here](https://gis
 
 ### Italics
 
-If you use vim in a terminal that supports italics, set the environment variable TERM_ITALICS to TRUE to enable with vim-deus.
+If you use vim in a terminal that supports italics, set the environment variable `TERM_ITALICS` to TRUE (i.e. `export TERM_ITALICS=true`) to enable with vim-deus.
 
 ---
 
