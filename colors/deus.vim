@@ -408,8 +408,9 @@ if version >= 703
   call s:HL('CursorLineNr', s:fg1, s:bg2)
 endif
 
-hi! link NonText deusBg2
-hi! link SpecialKey deusBg2
+" Weird black color breaks 
+hi! link NonText deusGreen 
+hi! link SpecialKey deusOrange
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
@@ -728,6 +729,24 @@ call s:HL('CtrlPMode2', s:bg0, s:blue, s:bold)
 call s:HL('CtrlPStats', s:fg4, s:bg2, s:bold)
 
 " }}}
+" FZF: {{{
+let g:fzf_colors =
+      \ {
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
+
+call s:HL('NormalFloat', s:fg1, s:bg2)
+"
+" }}}
 " Startify: {{{
 
 hi! link StartifyBracket deusFg3
@@ -757,6 +776,9 @@ call s:HL('BufTabLineCurrent', s:bg0, s:green)
 call s:HL('BufTabLineActive', s:fg4, s:bg2)
 call s:HL('BufTabLineHidden', s:fg1, s:bg2)
 call s:HL('BufTabLineFill', s:bg0, s:bg2)
+
+hi StatusLine ctermbg=10 ctermfg=10 cterm=bold guibg=NONE guifg=NONE gui=NONE
+hi StatusLineNC ctermbg=10 ctermfg=10 cterm=NONE guibg=NONE guifg=NONE gui=NONE
 
 " }}}
 
