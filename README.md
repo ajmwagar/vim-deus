@@ -7,11 +7,11 @@ I present you **Deus**:
 
 ## Screenshots
 
-<img src="./screencaps/vim-deus.jpg" width="400" height="300"/>
+<img src="./screencaps/vim-deus.jpg" width="700"/>
 
-<img src="./screencaps/node.jpg" width="400" height="300"/>
+<img src="./screencaps/node.jpg" width="700"/>
 
-<img src="./screencaps/merino.jpg" width="400" height="300"/>
+<img src="./screencaps/merino.jpg" width="700"/>
 
 ---
 
