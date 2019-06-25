@@ -7,11 +7,11 @@ I present you **Deus**:
 
 ## Screenshots
 
-<img src="./screencaps/vim-deus.jpg" width="100" height="300"/>
+<img src="./screencaps/vim-deus.jpg" width="400" height="300"/>
 
-<img src="./screencaps/node.jpg" width="100" height="300"/>
+<img src="./screencaps/node.jpg" width="400" height="300"/>
 
-<img src="./screencaps/merino.jpg" width="100" height="300"/>
+<img src="./screencaps/merino.jpg" width="400" height="300"/>
 
 ---
 
@@ -109,22 +109,22 @@ Don't forget to run:
 
 | Color                                                  | Hex     | Use           |
 |--------------------------------------------------------|---------|---------------|
-|<img src="https://www.colorhexa.com/eaeaea.png" width="10" height="10"/>| #eaeaea | foreground    |
-|<img src="https://www.colorhexa.com/2c323b.png" width="10" height="10"/>| #2c323b | background    |
-|<img src="https://www.colorhexa.com/ffffff.png" width="10" height="10"/>| #ffffff | white         |
-|<img src="https://www.colorhexa.com/000000.png" width="10" height="10"/>| #000000 | black         |
-|<img src="https://www.colorhexa.com/d54e53.png" width="10" height="10"/>| #d54e53 | red           |
-|<img src="https://www.colorhexa.com/98c379.png" width="10" height="10"/>| #98c379 | green         |
-|<img src="https://www.colorhexa.com/e5c07b.png" width="10" height="10"/>| #e5c07b | yellow        |
-|<img src="https://www.colorhexa.com/83a598.png" width="10" height="10"/>| #83a598 | teal          |
-|<img src="https://www.colorhexa.com/c678dd.png" width="10" height="10"/>| #c678dd | purple        |
-|<img src="https://www.colorhexa.com/70c0ba.png" width="10" height="10"/>| #70c0ba | bright teal   |
-|<img src="https://www.colorhexa.com/666666.png" width="10" height="10"/>| #666666 | gray          |
-|<img src="https://www.colorhexa.com/ec3e45.png" width="10" height="10"/>| #ec3e45 | bright red    |
-|<img src="https://www.colorhexa.com/90c966.png" width="10" height="10"/>| #90c966 | bright green  |
-|<img src="https://www.colorhexa.com/edbf69.png" width="10" height="10"/>| #edbf69 | bright yellow |
-|<img src="https://www.colorhexa.com/2bcec2.png" width="10" height="10"/>| #2bcec2 | bright blue   |
-|<img src="https://www.colorhexa.com/c858e9.png" width="10" height="10"/>| #c858e9 | bright purple |
+|<img src="https://www.colorhexa.com/eaeaea.png" width="30" height="30"/>| #eaeaea | foreground    |
+|<img src="https://www.colorhexa.com/2c323b.png" width="30" height="30"/>| #2c323b | background    |
+|<img src="https://www.colorhexa.com/ffffff.png" width="30" height="30"/>| #ffffff | white         |
+|<img src="https://www.colorhexa.com/000000.png" width="30" height="30"/>| #000000 | black         |
+|<img src="https://www.colorhexa.com/d54e53.png" width="30" height="30"/>| #d54e53 | red           |
+|<img src="https://www.colorhexa.com/98c379.png" width="30" height="30"/>| #98c379 | green         |
+|<img src="https://www.colorhexa.com/e5c07b.png" width="30" height="30"/>| #e5c07b | yellow        |
+|<img src="https://www.colorhexa.com/83a598.png" width="30" height="30"/>| #83a598 | teal          |
+|<img src="https://www.colorhexa.com/c678dd.png" width="30" height="30"/>| #c678dd | purple        |
+|<img src="https://www.colorhexa.com/70c0ba.png" width="30" height="30"/>| #70c0ba | bright teal   |
+|<img src="https://www.colorhexa.com/666666.png" width="30" height="30"/>| #666666 | gray          |
+|<img src="https://www.colorhexa.com/ec3e45.png" width="30" height="30"/>| #ec3e45 | bright red    |
+|<img src="https://www.colorhexa.com/90c966.png" width="30" height="30"/>| #90c966 | bright green  |
+|<img src="https://www.colorhexa.com/edbf69.png" width="30" height="30"/>| #edbf69 | bright yellow |
+|<img src="https://www.colorhexa.com/2bcec2.png" width="30" height="30"/>| #2bcec2 | bright blue   |
+|<img src="https://www.colorhexa.com/c858e9.png" width="30" height="30"/>| #c858e9 | bright purple |
 
 
 ## Troubleshooting
