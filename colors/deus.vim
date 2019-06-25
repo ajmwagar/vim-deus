@@ -2,8 +2,8 @@
 " File: deus.vim
 " Description: a retro-modern colorscheme in Vim
 " Author: ajmwagar
-" Source: https://github.com/ajmwagar/deus
-" Last Modified: 14 Nov 2017
+" Source: https://github.com/ajmwagar/vim-deus
+" Last Modified: 21 June 2019
 " -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------

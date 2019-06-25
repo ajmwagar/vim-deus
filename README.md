@@ -1,43 +1,26 @@
 # vim-deus
 
-Deus was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones.
+Deus was created out of sheer rage caused by all of the bad Solarized/Gruvbox clones. (No offense)
 I was tired of them. I needed something original, something new. So if you are like me, and I believe many of you are...
 
-I present you **deus**
-
----
-
+I present you **Deus**:
 
 ## Screenshots
 
-GVIM: 
-![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/ScreencapYCM.png "deus Colorscheme")
+<img src="./screencaps/vim-deus.jpg", style="width: 100px; height: 300px;"></img>
 
-GVIM + YCM:
+<img src="./screencaps/node.jpg", style="width: 100px; height: 300px;"></img>
 
-![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Deus.png "deus Colorscheme")
-
-GVIM + Pylint + Syntastic:
-
-![alt-text](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Pylint.png "deus Colorscheme")
-
-Airline theme
-![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/Airline.png)
-
-Terminal (Neo)vim
-
-![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/deusLinux.jpeg?raw=true)
-
-NERDTree
-![img](https://github.com/ajmwagar/vim-deus/blob/master/screencaps/duesNerdtree.jpeg?raw=true)
+<img src="./screencaps/merino.jpg", style="width: 100px; height: 300px;"></img>
 
 ---
 
-
-
 ## Installation
 
-Manual: place `deus.vim` in your `vimfiles/colors` folder and add this line to your `.vimrc`
+Manual: 
+1. download & place `deus.vim` in your `vimfiles/colors` folder (usually `~/.vim/colors/`)
+2. add this line to your `.vimrc`
+
 `colors deus`
 
 **OR**
@@ -46,25 +29,29 @@ Use a package manager like Pathogen, Vundle, or Vim-plug just to name a few:
 
 ### Pathogen:
 
-`cd ~/.vim/`
+Run this in your terminal
 
-`mkdir bundle`
+```bash
 
-`cd bundle`
+cd ~/.vim/
 
-`git clone https://github.com/ajmwagar/vim-deus.git`
+mkdir bundle
 
-In your terminal
+cd bundle
 
+git clone https://github.com/ajmwagar/vim-deus.git
+```
 
 ### Vim-Plug:
-add the following lines to your .vimrc:
 
-```
+Add the following lines to your `~/.vimrc`:
+
+```vim
 call plug#begin('~/.vim/bundle/')
 Plug 'ajmwagar/vim-deus'
 cal  plug#end()
 ```
+
 Don't forget to run:
 
 `:PlugInstall`
@@ -122,22 +109,22 @@ Don't forget to run:
 
 | Color                                                  | Hex     | Use           |
 |--------------------------------------------------------|---------|---------------|
-| ![foreground](https://www.colorhexa.com/eaeaea.png)    | #eaeaea | foreground    |
-| ![background](https://www.colorhexa.com/2c323b.png)    | #2c323b | background    |
-| ![white](https://www.colorhexa.com/ffffff.png)         | #ffffff | white         |
-| ![black](https://www.colorhexa.com/000000.png)         | #000000 | black         |
-| ![red](https://www.colorhexa.com/d54e53.png)           | #d54e53 | red           |
-| ![green](https://www.colorhexa.com/98c379.png)         | #98c379 | green         |
-| ![yellow](https://www.colorhexa.com/e5c07b.png)        | #e5c07b | yellow        |
-| ![teal](https://www.colorhexa.com/83a598.png)          | #83a598 | teal          |
-| ![purple](https://www.colorhexa.com/c678dd.png)        | #c678dd | purple        |
-| ![bright-teal](https://www.colorhexa.com/70c0ba.png)   | #70c0ba | bright teal   |
-| ![gray](https://www.colorhexa.com/666666.png)          | #666666 | gray          |
-| ![bright-red](https://www.colorhexa.com/ec3e45.png)    | #ec3e45 | bright red    |
-| ![bright-green](https://www.colorhexa.com/90c966.png)  | #90c966 | bright green  |
-| ![bright-yellow](https://www.colorhexa.com/edbf69.png) | #edbf69 | bright yellow |
-| ![bright-blue](https://www.colorhexa.com/2bcec2.png)   | #2bcec2 | bright blue   |
-| ![bright-purple](https://www.colorhexa.com/c858e9.png) | #c858e9 | bright purple |
+|<img src="https://www.colorhexa.com/eaeaea.png", style="height: 10px; width: 10px;"></img>| #eaeaea | foreground    |
+|<img src="https://www.colorhexa.com/2c323b.png", style="height: 10px; width: 10px;"></img>| #2c323b | background    |
+|<img src="https://www.colorhexa.com/ffffff.png", style="height: 10px; width: 10px;"></img>| #ffffff | white         |
+|<img src="https://www.colorhexa.com/000000.png", style="height: 10px; width: 10px;"></img>| #000000 | black         |
+|<img src="https://www.colorhexa.com/d54e53.png", style="height: 10px; width: 10px;"></img>| #d54e53 | red           |
+|<img src="https://www.colorhexa.com/98c379.png", style="height: 10px; width: 10px;"></img>| #98c379 | green         |
+|<img src="https://www.colorhexa.com/e5c07b.png", style="height: 10px; width: 10px;"></img>| #e5c07b | yellow        |
+|<img src="https://www.colorhexa.com/83a598.png", style="height: 10px; width: 10px;"></img>| #83a598 | teal          |
+|<img src="https://www.colorhexa.com/c678dd.png", style="height: 10px; width: 10px;"></img>| #c678dd | purple        |
+|<img src="https://www.colorhexa.com/70c0ba.png", style="height: 10px; width: 10px;"></img>| #70c0ba | bright teal   |
+|<img src="https://www.colorhexa.com/666666.png", style="height: 10px; width: 10px;"></img>| #666666 | gray          |
+|<img src="https://www.colorhexa.com/ec3e45.png", style="height: 10px; width: 10px;"></img>| #ec3e45 | bright red    |
+|<img src="https://www.colorhexa.com/90c966.png", style="height: 10px; width: 10px;"></img>| #90c966 | bright green  |
+|<img src="https://www.colorhexa.com/edbf69.png", style="height: 10px; width: 10px;"></img>| #edbf69 | bright yellow |
+|<img src="https://www.colorhexa.com/2bcec2.png", style="height: 10px; width: 10px;"></img>| #2bcec2 | bright blue   |
+|<img src="https://www.colorhexa.com/c858e9.png", style="height: 10px; width: 10px;"></img>| #c858e9 | bright purple |
 
 
 ## Troubleshooting
@@ -145,7 +132,8 @@ Don't forget to run:
 When using terminal-vim and vim-deus the colors
 can get messed up.
 
-To fix this add the following snippet to your ~/.vimrc:
+To fix this add the following snippet to your `~/.vimrc`:
+
 ```vim
 set t_Co=256
 set termguicolors
