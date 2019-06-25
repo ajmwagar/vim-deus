@@ -6,7 +6,7 @@
 " Last Modified: 21 June 2019
 " -----------------------------------------------------------------------------
 
-" Supporting code -------------------------------------------------------------
+" Setup Colors/Palette {{{
 " Initialisation: {{{
 
 if version > 580
@@ -208,7 +208,6 @@ let s:ds.aqua   = s:aqua
 let s:ds.orange = s:orange
 
 " }}}
-
 " Overload Setting: {{{
 
 let s:hls_cursor = s:orange
@@ -363,8 +362,8 @@ call s:HL('deusPurpleSign', s:purple, s:sign_column, s:invert_signs)
 call s:HL('deusAquaSign', s:aqua, s:sign_column, s:invert_signs)
 
 " }}}
-
-" Vanilla colorscheme ---------------------------------------------------------
+" }}}
+" Vanilla colorscheme {{{
 " General UI: {{{
 
 " Normal text
@@ -588,8 +587,8 @@ if has("spell")
 endif
 
 " }}}
-
-" Plugin specific -------------------------------------------------------------
+" }}}
+" Plugin specific {{{
 " Cocnvim: {{{
 " Symbols
 highlight link CocErrorSign deusRedSign
@@ -781,8 +780,8 @@ hi StatusLine ctermbg=10 ctermfg=10 cterm=bold guibg=NONE guifg=NONE gui=NONE
 hi StatusLineNC ctermbg=10 ctermfg=10 cterm=NONE guibg=NONE guifg=NONE gui=NONE
 
 " }}}
-
-" Filetype specific -----------------------------------------------------------
+" }}}
+" Language syntax {{{
 " Diff: {{{
 
 hi! link diffAdded deusGreen
@@ -894,7 +893,6 @@ hi! link cOperator deusPurple
 hi! link cStructure deusOrange
 
 " }}}
-
 " C++ {{{
 
 hi! link  NamespaceTag deusPurpleBold
@@ -920,7 +918,6 @@ hi! link  UsingDeclarationTag deusOrange
 
 
 " }}}
-
 " Python: {{{
 
 hi! link pythonBuiltin deusOrange
@@ -1205,9 +1202,8 @@ hi! link jsonBraces deusFg1
 hi! link jsonString deusFg1
 
 " }}}
-
-
-" Functions -------------------------------------------------------------------
+" }}}
+" Utility Functions {{{
 " Search Highlighting Cursor {{{
 
 function! DeusHlsShowCursor()
@@ -1219,7 +1215,6 @@ function! DeusHlsHideCursor()
 endfunction
 
 " }}}
-
-
+" }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
