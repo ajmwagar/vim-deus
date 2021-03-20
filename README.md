@@ -49,7 +49,7 @@ Add the following lines to your `~/.vimrc`:
 ```vim
 call plug#begin('~/.vim/bundle/')
 Plug 'ajmwagar/vim-deus'
-cal  plug#end()
+call  plug#end()
 ```
 
 Don't forget to run:
