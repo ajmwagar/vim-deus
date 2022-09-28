@@ -81,6 +81,7 @@ let s:is_dark=(&background == 'dark')
 " setup palette dictionary
 let s:ds = {}
 
+let s:ds.none = ['NONE', 'NONE']
 
 " fill it with absolute colors
 let s:ds.dark0       = ['#2C323B', 235]     " 40-40-40 Background
