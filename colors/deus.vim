@@ -3,11 +3,21 @@
 " Description: a retro-modern colorscheme in Vim
 " Author: ajmwagar
 " Source: https://github.com/ajmwagar/vim-deus
-" Last Modified: 21 June 2019
+" Last Modified: 01 August 2023
 " -----------------------------------------------------------------------------
 
 " Setup Colors/Palette {{{
 " Initialisation: {{{
+
+set t_Co=256
+set termguicolors
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark    " Setting dark mode
+colorscheme deus
+let g:deus_termcolors=256
 
 if version > 580
   hi clear
@@ -420,8 +430,8 @@ call s:HL('IncSearch', s:bg0, s:hls_cursor)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg2, s:fg1, s:bold . s:inverse)
-call s:HL('StatusLineNC', s:bg2, s:fg1, s:bold . s:inverse)
+call s:HL('StatusLine',   s:bg2, s:yellow, s:bold . s:inverse)
+call s:HL('StatusLineNC', s:bg2, s:blue, s:bold . s:inverse)
 
 " The column separating vertically split windows
 call s:HL('VertSplit', s:fg4, s:vert_split)
@@ -776,9 +786,6 @@ call s:HL('BufTabLineCurrent', s:bg0, s:green)
 call s:HL('BufTabLineActive', s:fg4, s:bg2)
 call s:HL('BufTabLineHidden', s:fg1, s:bg2)
 call s:HL('BufTabLineFill', s:bg0, s:bg2)
-
-hi StatusLine ctermbg=10 ctermfg=10 cterm=bold guibg=NONE guifg=NONE gui=NONE
-hi StatusLineNC ctermbg=10 ctermfg=10 cterm=NONE guibg=NONE guifg=NONE gui=NONE
 
 " }}}
 " Netrw: {{{
